@@ -16,7 +16,7 @@ Open your terminal/command prompt and run the following command to clone the rep
   git clone https://github.com/mseto97/automation-exercise-cypress.git
 
 
-Once the repo has been closed, navigate to the project folder
+Once the repo has been cloned, navigate to the project folder
   cd automation-exercise-cypress
 
 
@@ -34,7 +34,7 @@ This will install all necessary packages listed in the `package.json` file, incl
 
 
 ## Running the Tests
-Multiple environments have been configured for these tests:
+Two environments have been configured for these tests:
 
 - **'dev'** environment:  
   `baseUrl`: https://automationexercise.com/  
@@ -59,6 +59,10 @@ If you prefer to run tests interactively using the Cypress Test Runner (UI), run
 ### To run tests in the 'test' environment:
   npx cypress open --config-file 'cypress/config/test.config.ts'
 
+### To run tests with the default environment (dev):
+  npx cypress open
+  
+
 The Cypress Test Runner will open, and you can select which tests to run interactively. The detailed results and logs will be displayed in the UI.
 
 
@@ -67,13 +71,21 @@ The Cypress Test Runner will open, and you can select which tests to run interac
 
 If you want to run tests without using the Cypress Test Runner (UI), you can run them in **headless mode**.
 
-To run a specific test file in headless mode:
+### To run a specific test file in headless mode:
 
   npx cypress run --spec "[path to the spec file]" --config-file 'cypress/config/[test or dev].config.ts'
 
-Example:
+  or to run with default env settings (dev)
+
+  npx cypress run --spec "[path to the spec file]" 
+
+### Example:
 
   npx cypress run --spec "cypress/e2e/api/verifyLogin-endpoint.cy.ts" --config-file 'cypress/config/dev.config.ts'
+
+  or
+  
+  npx cypress run --spec "cypress/e2e/api/verifyLogin-endpoint.cy.ts"
 
 The test results will be displayed directly in the terminal.
 
