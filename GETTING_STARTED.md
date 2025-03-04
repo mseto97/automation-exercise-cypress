@@ -7,16 +7,26 @@ https://automationexercise.com/api_list: TEST CASE 7, 8, 9 and 10
 The tests are written in TypeScript and follow the Page Object Model pattern.
 Test/spec files are in the e2e folder. 
 
+## Prerequisites
+Ensure you have Node.js and npm installed on your machine. You can download and install Node.js (which includes npm) from [Node.js official website](https://nodejs.org/).
+
+To verify if npm is installed, run the following command in your terminal/command prompt:
+
+  npm --version
+
+If npm is installed, this command will display the version number.
+If you don't have npm installed, please install it before proceeding with the following steps.
+
 
 ## Getting the Latest Code
 To get the latest code from the GitHub repository, clone the repository to your local machine using the following steps:
 
-Open your terminal/command prompt and run the following command to clone the repository:
+Open your terminal/command prompt and navigate to the folder location you wish to clone the repo to. Run the following command to clone the repository:
 
   git clone https://github.com/mseto97/automation-exercise-cypress.git
 
 
-Once the repo has been cloned, navigate to the project folder
+Once the repo has been cloned, navigate to the project folder in the terminal using:
   cd automation-exercise-cypress
 
 
@@ -41,7 +51,7 @@ Two environments have been configured for these tests:
   User password: `D3v3nv1r0m3nt`
 
 - **'test'** environment:  
-  `baseUrl`: https://test.automationexercise.com/ (non-working instance)  
+  `baseUrl`: https://test.automationexercise.com/ **(non-working instance)**  
   User password: `T35t3nv1r0m3nt`
 
 Depending on the environment you choose, Cypress will navigate to the relevant URLs and use the appropriate credentials.
